@@ -1,0 +1,54 @@
+<div class="container">
+    <form id="myForm">
+        <div class="d-flex flew-row">
+            <div class="form-group col-4">
+                <label for="title">Terme de recherche :</label>
+                <input class="form-control" type="text" name="title" id="title" placeholder="Titre d'un évenement...">
+            </div>
+            <div class="form-group col-4">
+                <label for="date">Années de l'évenement</label>
+                <select class="form-control" name="date" id="date">
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <label for="type">Trier par :</label>
+                <select class="form-control" name="type" id="type">
+                    <option value="date_start">Date(Croissant)</option>
+                    <option value="-date_start">Date(Décroissant)</option>
+                    <option value="tags">Tags</option>
+                    <option value="title">Titre</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" value="Valider" class="ml-3 btn btn-outline-success border border-success">
+    </form>
+
+    <table class="table table-hover table-dark" style="display: none;">
+        <!-- <table class="table table-hover table-dark" style="display: none;"> -->
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Lien vers l'image</th>
+          </tr>
+        </thead>
+        <tbody class="content">
+        </tbody>
+    </table>
+
+    <template id="productrow">
+        <tr>
+            <td class="id"></td>
+            <td class="title"></td>
+            <td>
+                <figure style="max-width: 100px; heigth: auto;">
+                    <img class="img" src="" style="width: 100px; heigth: auto;">
+                </figure>
+            </td>
+        </tr>
+    </template>
+</div>
